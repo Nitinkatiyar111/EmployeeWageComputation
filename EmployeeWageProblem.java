@@ -3,7 +3,7 @@ public class EmployeeWageProblem
     public static final int WAGE_PER_HOUR = 20;
     public static final int IS_PART_TIME  = 1;
     public static final int IS_FULL_TIME = 2;    
-public static void computeDailyWage()
+public static void computeDailyWage(String company,int empRatePerHour,int numOfWorkingDays, int maxHoursPerMonth)
   { 
      int totalWage = 0;
      int totalWorkingDay = 20;
@@ -13,7 +13,8 @@ public static void computeDailyWage()
      int workingDay  = 1;
      int maxWorkingDay  = 20;
      int  maxWorkingHour = 100;
-while ( workingHour < maxWorkingDay || workingHour < maxWorkingHour)
+
+while ( workingDay < maxWorkingDay || workingHour < maxWorkingHour)
   {
       int empTypeCheck  = (int) Math.floor(Math.random() * 10) % 3;
        switch (empTypeCheck) 
