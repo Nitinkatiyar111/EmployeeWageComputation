@@ -1,35 +1,33 @@
 public class EmployeeWageProblem 
   {
-    public static final int WAGE_PER_HOUR = 20;
+    public static final int EMP_RATE_HOUR = 20;
     public static final int IS_PART_TIME  = 1;
     public static final int IS_FULL_TIME = 2;    
-public static void computeDailyWage(String company,int empRatePerHour,int numOfWorkingDays, int maxHoursPerMonth)
-  { 
+
+public static void computeDailyWage() 
+ {
      int totalWage = 0;
-     int totalWorkingDay = 20;
      int empHrs = 0;
-     int totalEmpHrs = 0;
      int workingHour = 0;
      int workingDay  = 1;
      int maxWorkingDay  = 20;
      int  maxWorkingHour = 100;
-
-while ( workingDay < maxWorkingDay || workingHour < maxWorkingHour)
-  {
+   while ( workingDay < maxWorkingDay || workingHour < maxWorkingHour)
+  
+   {
       int empTypeCheck  = (int) Math.floor(Math.random() * 10) % 3;
        switch (empTypeCheck) 
     {
        case IS_PART_TIME:
-        empHrs = 4 * totalWorkingDay;
+        empHrs = 4 ;
             break;
        case IS_FULL_TIME:
-       empHrs = 8 * totalWorkingDay;
+       empHrs = 8;
           break;
     default:
          empHrs = 0;
- }
-totalEmpHrs +=empHrs ;   
-    totalWage = totalEmpHrs * WAGE_PER_HOUR ;
+ }   
+    totalWage += empHrs *  EMP_RATE_HOUR  ;
      workingHour = workingHour + 8;
      workingDay = workingDay + 1;
   }
@@ -50,10 +48,14 @@ System.out.println("Welcome to Employee Wage Computation program");
       if(empCheck == 0)
    {
        System.out.println("Employee is present");
-        computeDailyWage();
+                  computeDailyWage();
+                      
 
  }
   else
      System.out.println("Employee is absent");
-   }
+   
+
+    }
+
 }
