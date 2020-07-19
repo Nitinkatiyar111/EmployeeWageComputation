@@ -16,7 +16,7 @@ public class EmployeeWageProblem
        this.empRatePerHour = empRatePerHour;
        this.maxWorkingDays = maxWorkingDays;
        this.maxWorkingHour = maxWorkingHour;      
-  }
+}
 
     public void computeDailyWage() 
   {
@@ -37,14 +37,14 @@ public class EmployeeWageProblem
               case IS_FULL_TIME:
               empHrs = 8;
               break;
-    default:
-         empHrs = 0;
-         } 
+       default:
+             empHrs = 0;
+       } 
          workingHour += empHrs;
      
-        } 
+     } 
         totalEmpWage += empHrs * empRatePerHour ; 
-   }
+  }
        public String toString() {
        return "Total emp wage for company: " +company+ " is: "+ totalEmpWage;
 }
@@ -65,7 +65,7 @@ public class EmployeeWageProblem
                   computeDailyWage();
                       
 
- }
+    }
      else
         System.out.println("Employee is absent");
 }   
