@@ -73,13 +73,13 @@ public class EmployeeWageProblem
     public static void main(String[] args)
   {
     
-    EmployeeWageProblem dMart = new EmployeeWageProblem("DMart",30,2,10);
+       EmployeeWageProblem dMart = new EmployeeWageProblem("DMart",30,2,10);
        dMart.checkAttendance();
        dMart.computeDailyWage();
        System.out.println(dMart);
        EmployeeWageProblem reliance = new EmployeeWageProblem("Reliance",40,4,10);
-        reliance.checkAttendance();
-        reliance.computeDailyWage();
+       reliance.checkAttendance();
+       reliance.computeDailyWage();
        System.out.println(reliance); 
 
     }
