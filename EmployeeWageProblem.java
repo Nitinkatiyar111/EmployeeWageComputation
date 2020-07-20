@@ -1,4 +1,4 @@
-public class EmployeeWageProblem 
+public class EmployeeWageCalculate
   {
         public static final int IS_PART_TIME  = 1;
         public static final int IS_FULL_TIME = 2;
@@ -12,25 +12,25 @@ public class EmployeeWageProblem
 
       public EmployeeWageProblem(String company,int empRatePerHour,int maxWorkingDays, int maxWorkingHour)
     { 
-       this.company = company;
-       this.empRatePerHour = empRatePerHour;
-       this.maxWorkingDays = maxWorkingDays;
-       this.maxWorkingHour = maxWorkingHour;      
+            this.company = company;
+            this.empRatePerHour = empRatePerHour;
+            this.maxWorkingDays = maxWorkingDays;
+            this.maxWorkingHour = maxWorkingHour;      
 }
 
     public void computeDailyWage() 
-  {
-       int empHrs = 0;
-       int workingHour = 0;
-       int totalWorkingDay  = 0;
-
-      while ( totalWorkingDay < maxWorkingDays || workingHour < maxWorkingHour)
-    {
-         totalWorkingDay++;
-         int empTypeCheck  = (int) Math.floor(Math.random() * 10) % 3;
-       
-       switch (empTypeCheck) 
         {
+            int empHrs = 0;
+            int workingHour = 0;
+            int  totalWorkingDay  = 0;
+
+      while ( totalWorkingDay < maxWorkingDays || workingHour < maxWorkingHour)       
+     {
+              totalWorkingDay++;
+              int empTypeCheck  = (int) Math.floor(Math.random() * 10) % 3;
+       
+          switch (empTypeCheck) 
+  { 
               case IS_PART_TIME:
               empHrs = 4 ;
               break;
@@ -61,8 +61,8 @@ public class EmployeeWageProblem
 
     if(empCheck == 0)
   {
-                  System.out.println("Employee is present");
-                  computeDailyWage();
+        System.out.println("Employee is present");
+        computeDailyWage();
                       
 
     }
@@ -79,7 +79,7 @@ public class EmployeeWageProblem
        System.out.println(dMart);
        EmployeeWageProblem reliance = new EmployeeWageProblem("Reliance",40,4,10);
        reliance.checkAttendance();
-       reliance.computeDailyWage();
+       reliance.computeDailyWage()
        System.out.println(reliance); 
 
     }
